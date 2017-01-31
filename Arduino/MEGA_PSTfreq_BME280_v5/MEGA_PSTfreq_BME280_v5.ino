@@ -1,16 +1,22 @@
 //-------------------------------------------------------------------------
-//Frequency Measure for a Motorcycle Testbench
-//ICP4 and ICP5 are used for external signals. Based on Arduino Mega
-//Rising edges will be detected
-//Andreas Benz andreasnbenz@gmail.com
+// Frequency Measure for a Motorcycle Testbench
+// ICP4 and ICP5 are used for external signals. Based on Arduino Mega
+// Rising edges will be detected
+// Send commands with Newline \n
+// Andreas Benz andreasnbenz@gmail.com
+// SEND e for BME280 data
+// SEND m for starting meassurement
+//
+//
 //----------------OUTPUT over Serial--------------------------------------
 //sendCycle;Messfrequenz;Frequenz Kanal1(Pin49);Frequenz Kanal2(Pin48)
 //------------------------------------------------------------------------
 //Debug Output Pin38
-//Built 4.4 21.12.2016
+//Built 5.0 20.01.2017
 //---------------------------------------------
 
 //-------------------Ringbuffer SIZE---------------------------------------
+boolean initial=true;
 int comlevel = 1;                         
 int ringsize = 50;
 bool debug = false;
@@ -36,16 +42,37 @@ int j = 0;
 volatile uint32_t  ovl4 = 0;
 volatile uint32_t  ovl5 = 0;
 volatile uint32_t  ovlTIM0 = 0;
+double Temp;
+double P;
+double Hum;
 
 
+
+ String inputString = "";         // a string to hold incoming data
+ boolean stringComplete = false;  // whether the string is complete
 
 
 
 #include <util/atomic.h>
+#include <stdint.h>
+#include "SparkFunBME280.h"
+#include "SPI.h"
+#include "Wire.h"
+#include <util/delay.h>
+
+
+ //----------BME280--------------
+//Global sensor object
+BME280 mySensor;
+
+
 
 int main(void) {
   cli();
+  
+  
 
+  
   //--------------------Reset all---------------------
   //Timer0      8-bit
   TCCR0A = 0x00;
@@ -130,22 +157,33 @@ int main(void) {
 
 
   //----------SERIAL---------
-  Serial.begin(250000);
+ 
+  inputString.reserve(5);
+  
+   //----------BME280--------------
 
+  mySensor.settings.commInterface = I2C_MODE;
+  mySensor.settings.I2CAddress = 0x77;
+    mySensor.settings.runMode = 3; //Normal mode
 
+  mySensor.settings.tStandby = 0;
+  mySensor.settings.tempOverSample = 1;
+  mySensor.settings.pressOverSample = 1;
+  mySensor.settings.humidOverSample = 1;
+  
+  
 
-  //Clear all Interrupt Flags
+//---------Interrupt Flags--------
  // EIFR |= (1 << INTF0);
   TIFR4 |= (1 << ICF4);   //Clear ICP4 FLAG
   TIFR5 |= (1 << ICF5);   //Clear ICP5 FLAG
  
-
+Serial.begin(250000);
 
   //------enables global Interupts--------------
   sei();
 
-
-  uint32_t freqsum4;
+ uint32_t freqsum4;
   uint32_t freqsum5;
   uint32_t pulse4[ringsize];
   uint32_t freq4[ringsize];
@@ -158,7 +196,8 @@ int main(void) {
   double timer;
   uint32_t multi;
   uint16_t cycle=0;
-
+  bool     mess=false;
+  
   multi=comlevel*256;
   int x;
 
@@ -169,17 +208,49 @@ for (x = 0; x <= ringsize - 1 ; x++) {
   freq5[x]=0;
   shift4[x]=0;
   shift5[x]=0;
+   
 }
 
 
-  while (1)  {
-    
 
-    if (ovlTIM0 >= comlevel) {
+//------------------MAIN------------------
+  while (1)  {
+
+   if (Serial.available()>0) serialEvent();
+   
+if (stringComplete && inputString=="e" ) {
+  BME280();
+    Serial.print(Temp,1);
+    Serial.print(";");
+    Serial.print(P,0);
+    Serial.print(";");
+    Serial.println(Hum,1);
+    
+    stringComplete = false;
+  }
+
+  
+  if (stringComplete && inputString=="m" ) {
+    
+    if (mess==false){
+    mess=true;
+    inputString = "";
+    }
+
+    else{
+ 
+    mess=false;
+    cycle=0;
+    inputString = "";
+   }
+    stringComplete = false;
+  }
+  
+    if (ovlTIM0 >= comlevel && mess) {
   
       cycle++;
       uint32_t h4 = 1;
-    uint32_t h5 = 1;
+      uint32_t h5 = 1;
 
       for (x = 0; x <= ringsize - 1 ; x++) {
         ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
@@ -244,7 +315,6 @@ for (x = 0; x <= ringsize - 1 ; x++) {
        }
        }
       // PORTD ^= (1 << PD7);
-    
         Serial.print(  cycle, DEC);
       Serial.print(";");
       Serial.print(  timer, 2);
@@ -253,6 +323,7 @@ for (x = 0; x <= ringsize - 1 ; x++) {
       Serial.print(";");
       Serial.print( freqsum5, DEC);
       Serial.print('\n');
+ 
 //------------------RESET-------------------------
     
       
@@ -269,20 +340,18 @@ for (x = 0; x <= ringsize - 1 ; x++) {
 
 
 
+
 ISR(TIMER0_OVF_vect) {
   ovlTIM0++;
-
 }
 
 ISR(TIMER4_OVF_vect) {
   ovlTIM4++;
-
 }
 
 ISR(TIMER5_OVF_vect) {
   ovlTIM5++;
-  
-}
+  }
 
 
 
@@ -318,10 +387,7 @@ ISR(TIMER4_CAPT_vect) {
     if (i == ringsize) {
       i = 0;
     }
-
   }
-
-
 }
 
 ISR(TIMER5_CAPT_vect) {
@@ -335,8 +401,7 @@ ISR(TIMER5_CAPT_vect) {
     {
       ovlCAPTst5[j]++;                                         // nur, wenn capture-int + overflow-int gleichzeitig !
     }
-    ErsteFlanke5 = 0;   
-                 
+    ErsteFlanke5 = 0;                  
   }
   else {
 
@@ -347,7 +412,6 @@ ISR(TIMER5_CAPT_vect) {
       ovlCAPTend5[j]++;                                      // nur, wenn capture-int + overflow-int gleichzeitig !
     }
 
-
     Messung5[j] = 1;
     ErsteFlanke5 = 1;                    
    
@@ -357,8 +421,49 @@ ISR(TIMER5_CAPT_vect) {
     if (j == ringsize) {
       j = 0;
     }
-
   }
+ }
 
-  
+
+void serialEvent() {
+  while (Serial.available()) {
+    
+    char inChar = (char)Serial.read();
+    if (inChar != '\n'){
+      inputString = inChar;
+      stringComplete = true;
+    }
+  }
 }
+
+void BME280() {
+  Serial.begin(57600);
+    if (initial){
+        _delay_ms(10);  //Make sure sensor had enough time to turn on. BME280 requires 2ms to start up.
+  mySensor.begin();
+
+ 
+
+
+initial=false;
+    }
+ 
+mySensor.readRegister(BME280_CHIP_ID_REG);
+ // Serial.print("Reset register(0xE0): 0x");
+mySensor.readRegister(BME280_RST_REG);
+  //Serial.print("ctrl_meas(0xF4): 0x");
+mySensor.readRegister(BME280_CTRL_MEAS_REG);
+  //Serial.print("ctrl_hum(0xF2): 0x");
+mySensor.readRegister(BME280_CTRL_HUMIDITY_REG);
+  
+  Temp=mySensor.readTempC();
+  
+ P=mySensor.readFloatPressure();
+ 
+ Hum=mySensor.readFloatHumidity();
+    
+  Serial.begin(250000);
+}
+
+
+
