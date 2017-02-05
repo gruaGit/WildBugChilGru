@@ -14,7 +14,7 @@
 </String>
 <U16>
 <Name>Rolle [Inkr/U]</Name>
-<Val>0</Val>
+<Val>200</Val>
 </U16>
 <DBL>
 <Name>Rollenumfang [m]</Name>
@@ -62,7 +62,7 @@
 </DBL>
 <DBL>
 <Name>Lufttemperatur [°C]</Name>
-<Val>0.00000000000000</Val>
+<Val>20.00000000000000</Val>
 </DBL>
 <DBL>
 <Name>Luftfeuchtigkeit [%]</Name>

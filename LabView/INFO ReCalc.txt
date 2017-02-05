@@ -1,0 +1,2 @@
+ReCalc_V0.11.vi ist  noch nicht an die aktuelle XML-Struktur angepasst
+--> tbd in ReCalc_V0.12.vi
