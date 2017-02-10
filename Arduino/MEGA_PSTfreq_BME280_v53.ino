@@ -120,7 +120,7 @@ void serialEvent() {
 void BME280() {
   Serial.begin(57600);
   if (initial) {
-    _delay_ms(10);  //Make sure sensor had enough time to turn on. BME280 requires 2ms to start up.
+    _delay_ms(1000);  //Make sure sensor had enough time to turn on. BME280 requires 2ms to start up.
     mySensor.begin();
     initial = false;
   }
