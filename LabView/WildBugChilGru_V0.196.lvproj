@@ -112,33 +112,32 @@
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 		</Item>
 		<Item Name="Build-Spezifikationen" Type="Build">
-			<Item Name="Meine Anwendung" Type="EXE">
+			<Item Name="WildBugGruChill" Type="EXE">
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
 				<Property Name="App_INI_aliasGUID" Type="Str">{A44586B6-F286-4ED4-BAD2-7A0A26AAA7EE}</Property>
 				<Property Name="App_INI_GUID" Type="Str">{AA5BA8DE-C272-4192-B534-D8542A33EFE1}</Property>
 				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
-				<Property Name="App_winsec.description" Type="Str">http://www.Microsoft.com</Property>
-				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{DC8841FF-45F1-43E7-819D-9305FC530E98}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">Meine Anwendung</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">WildBugGruChill</Property>
 				<Property Name="Bld_defaultLanguage" Type="Str">German</Property>
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/Meine Anwendung</Property>
-				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A8439469-0CB1-4769-A2D0-D2432BEE9614}</Property>
-				<Property Name="Bld_version.build" Type="Int">1</Property>
-				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Bld_version.minor" Type="Int">196</Property>
 				<Property Name="Destination[0].destName" Type="Str">WildBugGruChill.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Meine Anwendung/WildBugGruChill.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/WildBugGruChill.exe</Property>
+				<Property Name="Destination[0].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Hilfsdatei-Verzeichnis</Property>
-				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/Meine Anwendung/data</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/data</Property>
+				<Property Name="Destination[1].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{DAD4BD39-EB15-42F7-A60D-E79D549355FA}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{8720FB0B-8170-4A32-8007-4966E9CC49BA}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/WildBugChilGru_V0.196.vi</Property>
@@ -152,12 +151,18 @@
 				<Property Name="Source[3].itemID" Type="Ref">/Mein Computer/ReCalc_V0.15.vi</Property>
 				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[3].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">4</Property>
+				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/Mein Computer/savecluster_V0.01.vi</Property>
+				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[4].type" Type="Str">VI</Property>
+				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/Mein Computer/Konfig.xml</Property>
+				<Property Name="SourceCount" Type="Int">6</Property>
 				<Property Name="TgtF_companyName" Type="Str">Microsoft</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">Meine Anwendung</Property>
-				<Property Name="TgtF_internalName" Type="Str">Meine Anwendung</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">WildBugGruChill</Property>
+				<Property Name="TgtF_internalName" Type="Str">WildBugGruChill</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2017 Microsoft</Property>
-				<Property Name="TgtF_productName" Type="Str">Meine Anwendung</Property>
+				<Property Name="TgtF_productName" Type="Str">WildBugGruChill</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{F5ECCF7E-C7A7-4BEE-999F-60D6ED9DCA14}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">WildBugGruChill.exe</Property>
 			</Item>
