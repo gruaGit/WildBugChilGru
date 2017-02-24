@@ -14,6 +14,7 @@
 		<Item Name="printgraph_V0.01.vi" Type="VI" URL="../printgraph_V0.01.vi"/>
 		<Item Name="ReCalc_V0.15.vi" Type="VI" URL="../ReCalc_V0.15.vi"/>
 		<Item Name="savecluster_V0.01.vi" Type="VI" URL="../savecluster_V0.01.vi"/>
+		<Item Name="WildBugChilGru.ico" Type="Document" URL="../WildBugChilGru.ico"/>
 		<Item Name="WildBugChilGru_V0.196.vi" Type="VI" URL="../WildBugChilGru_V0.196.vi"/>
 		<Item Name="Abhängigkeiten" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -112,13 +113,13 @@
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 		</Item>
 		<Item Name="Build-Spezifikationen" Type="Build">
-			<Item Name="WildBugGruChill" Type="EXE">
+			<Item Name="WildBugChilGru" Type="EXE">
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
 				<Property Name="App_INI_aliasGUID" Type="Str">{A44586B6-F286-4ED4-BAD2-7A0A26AAA7EE}</Property>
 				<Property Name="App_INI_GUID" Type="Str">{AA5BA8DE-C272-4192-B534-D8542A33EFE1}</Property>
 				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{DC8841FF-45F1-43E7-819D-9305FC530E98}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">WildBugGruChill</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">WildBugChilGru</Property>
 				<Property Name="Bld_defaultLanguage" Type="Str">German</Property>
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
@@ -128,8 +129,9 @@
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A8439469-0CB1-4769-A2D0-D2432BEE9614}</Property>
 				<Property Name="Bld_version.minor" Type="Int">196</Property>
-				<Property Name="Destination[0].destName" Type="Str">WildBugGruChill.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../builds/WildBugGruChill.exe</Property>
+				<Property Name="Bld_version.patch" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">WildBugChilGru.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/WildBugChilGru.exe</Property>
 				<Property Name="Destination[0].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
@@ -137,7 +139,8 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/data</Property>
 				<Property Name="Destination[1].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{8720FB0B-8170-4A32-8007-4966E9CC49BA}</Property>
+				<Property Name="Exe_iconItemID" Type="Ref">/Mein Computer/WildBugChilGru.ico</Property>
+				<Property Name="Source[0].itemID" Type="Str">{9257C9CD-1600-44FD-9D26-9D7DECE9D106}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/WildBugChilGru_V0.196.vi</Property>
@@ -157,14 +160,15 @@
 				<Property Name="Source[4].type" Type="Str">VI</Property>
 				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[5].itemID" Type="Ref">/Mein Computer/Konfig.xml</Property>
+				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="SourceCount" Type="Int">6</Property>
-				<Property Name="TgtF_companyName" Type="Str">Microsoft</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">WildBugGruChill</Property>
-				<Property Name="TgtF_internalName" Type="Str">WildBugGruChill</Property>
-				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2017 Microsoft</Property>
-				<Property Name="TgtF_productName" Type="Str">WildBugGruChill</Property>
+				<Property Name="TgtF_companyName" Type="Str">WildBugChilGru</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Leistungsprüfstand auf Basis von Arduino Mega und LabView</Property>
+				<Property Name="TgtF_internalName" Type="Str">WildBugChilGru</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">GNU</Property>
+				<Property Name="TgtF_productName" Type="Str">WildBugChilGru</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{F5ECCF7E-C7A7-4BEE-999F-60D6ED9DCA14}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">WildBugGruChill.exe</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">WildBugChilGru.exe</Property>
 			</Item>
 		</Item>
 	</Item>
