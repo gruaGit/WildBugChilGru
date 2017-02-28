@@ -1,0 +1,27 @@
+//========================================================================
+//
+// MEGA_PSTfreq_BME280_v5
+//
+// Sketch für Arduino MEGA mit Klimasensor BME20
+//
+//----------------OUTPUT over Serial--------------------------------------
+//sendCycle;Messfrequenz;Frequenz Kanal1(Pin49);Frequenz Kanal2(Pin48)
+//
+//========================================================================
+//
+// UNO_DEBUG_BME280_v5
+//
+// Debug-Sketch für Arduino UNU
+// simuliert den MEGA und BME20 auf einem UNO
+//
+//----------------OUTPUT over Serial--------------------------------------
+//sendCycle;Messfrequenz;Frequenz Kanal1(Pin49);Frequenz Kanal2(Pin48)
+//
+//========================================================================
+//
+// MEGA_PSTfreq_BME280_v53
+//
+// Sketch für Arduino MEGA mit Klimasensor BME20 und Thermoelement MAX31855
+//
+//----------------OUTPUT over Serial--------------------------------------
+//sendCycle;Messfrequenz;Frequenz Kanal1(Pin49);Frequenz Kanal2(Pin48);Max31855 Thermocouple read
