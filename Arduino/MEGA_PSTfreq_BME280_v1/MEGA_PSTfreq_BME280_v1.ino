@@ -13,17 +13,18 @@
 //sendCycle;Messfrequenz;Frequenz Kanal1(Pin49);Frequenz Kanal2(Pin48);Max31855 Thermocouple read
 //------------------------------------------------------------------------
 //Debug Output Pin38   PORTD ^= (1 << PD7);
-//Built 1.0 27.02.2017
+//Built 1.01 02.03.2017
 //---------------------------------------------
 
 //-------------------SETUP---------------------------------------
-
+uint32_t baud = 115200;
 int comlevel = 1;                    	// increase for lower data transfer frequenz 1 approx. 45Hz
 int ringsize = 50;                 		// size of Ringbuffer
 uint16_t thermocycle = 25;	
 bool thermo = false;                   	// MAX31855 Data (Thermoelement) send yes or no
 int p_cor= 500;							// Correction for BME280 Pressure Measurement in Pa
-	
+int t_cor= 0;  
+int h_cor= 0;  
 //----------MAX31855--------------
 
 #define MAXCS 53						// CS Pin fpr MAX31855
@@ -115,7 +116,7 @@ void serialEvent() {
 
 //----------BME280--------------
 void BME280() {
-  Serial.begin(57600);	//BME280 communicates on 57600 BAUD
+  Serial.begin(57600);	//BME280 communicates on 57600 115200
   if (initial) {
    _delay_ms(10);  
     mySensor.begin();
@@ -129,12 +130,12 @@ void BME280() {
   mySensor.readRegister(BME280_CTRL_HUMIDITY_REG);
 
   Temp = mySensor.readTempC();
-
+  Temp=Temp+t_cor;
   P = mySensor.readFloatPressure();
   P= P+p_cor;
   Hum = mySensor.readFloatHumidity();
-
-  Serial.begin(250000);
+  Hum=Hum+h_cor;
+  Serial.begin(baud);
 }
 
 
@@ -207,7 +208,7 @@ void setup() {
 
 
   //----------SERIAL---------
-  Serial.begin(250000);
+  Serial.begin(baud);
   
   inputString.reserve(5);
   
