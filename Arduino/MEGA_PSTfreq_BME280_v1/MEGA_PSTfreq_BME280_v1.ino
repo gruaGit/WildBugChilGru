@@ -26,7 +26,7 @@ int p_cor = 500;							// Correction for BME280 Pressure Measurement in Pa
 int t_cor = 0;
 int h_cor = 0;
 
-bool debug = true;
+bool debug = false;
 
 
 //----------MAX31855--------------
