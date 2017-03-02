@@ -17,14 +17,18 @@
 //---------------------------------------------
 
 //-------------------SETUP---------------------------------------
-uint32_t baud = 115200;
+uint32_t baud = 250000;
 int comlevel = 1;                    	// increase for lower data transfer frequenz 1 approx. 45Hz
 int ringsize = 50;                 		// size of Ringbuffer
-uint16_t thermocycle = 25;	
+uint16_t thermocycle = 25;
 bool thermo = false;                   	// MAX31855 Data (Thermoelement) send yes or no
-int p_cor= 500;							// Correction for BME280 Pressure Measurement in Pa
-int t_cor= 0;  
-int h_cor= 0;  
+int p_cor = 500;							// Correction for BME280 Pressure Measurement in Pa
+int t_cor = 0;
+int h_cor = 0;
+
+bool debug = true;
+
+
 //----------MAX31855--------------
 
 #define MAXCS 53						// CS Pin fpr MAX31855
@@ -61,7 +65,7 @@ uint16_t debugcount;
 double timer;
 uint32_t multi;
 uint16_t cycle = 0;
-uint16_t lastcycle =0;
+uint16_t lastcycle = 0;
 bool    mess = false;
 bool    initial = true;
 double  c = 0;
@@ -118,9 +122,9 @@ void serialEvent() {
 void BME280() {
   Serial.begin(57600);	//BME280 communicates on 57600 115200
   if (initial) {
-   _delay_ms(10);  
+    _delay_ms(10);
     mySensor.begin();
-   _delay_ms(100);  
+    _delay_ms(100);
     initial = false;
   }
 
@@ -130,11 +134,17 @@ void BME280() {
   mySensor.readRegister(BME280_CTRL_HUMIDITY_REG);
 
   Temp = mySensor.readTempC();
-  Temp=Temp+t_cor;
+  Temp = Temp + t_cor;
   P = mySensor.readFloatPressure();
-  P= P+p_cor;
+  P = P + p_cor;
   Hum = mySensor.readFloatHumidity();
-  Hum=Hum+h_cor;
+  Hum = Hum + h_cor;
+
+  if (debug) {
+    P=100000;
+    Temp=25;
+    Hum=50;
+  }
   Serial.begin(baud);
 }
 
@@ -192,7 +202,7 @@ void setup() {
   //TIMER 2
   TIMSK2 |= (1 << TOIE2);                     // Timer 2 Overflow
   TCCR2B |= (1 << CS22) ;
-  TCCR2B |= ((1 << CS21) | (1 << CS20));     //1024 prescaler, timer 2 and START 
+  TCCR2B |= ((1 << CS21) | (1 << CS20));     //1024 prescaler, timer 2 and START
 
   //----------Port definition----------
 
@@ -209,9 +219,9 @@ void setup() {
 
   //----------SERIAL---------
   Serial.begin(baud);
-  
+
   inputString.reserve(5);
-  
+
   //----------BME280--------------
 
   mySensor.settings.commInterface = I2C_MODE;
@@ -222,15 +232,15 @@ void setup() {
   mySensor.settings.tempOverSample = 1;
   mySensor.settings.pressOverSample = 1;
   mySensor.settings.humidOverSample = 1;
-  
+  double timer;
   multi = comlevel * 256;
 
-//----------------Clear all and GO!!-----------------------------
+  //----------------Clear all and GO!!-----------------------------
   TIFR4 |= (1 << ICF4);   //Clear ICP4 FLAG
   TIFR5 |= (1 << ICF5);   //Clear ICP5 FLAG
 
   sei();
-//----------------INIT Ringbuffer = 0-----------------------------
+  //----------------INIT Ringbuffer = 0-----------------------------
   for (int x = 0; x <= ringsize - 1 ; x++) {
     pulse4[x] = 0;
     pulse5[x] = 0;
@@ -242,7 +252,7 @@ void setup() {
 }
 
 
- 
+
 
 ///////////////////////////////////////////////////////////////
 //-----------------MAIN--------------------------------------//
@@ -282,10 +292,10 @@ void loop() {
   }
 
   if (ovlTIM2 >= comlevel && mess ) {
-   PORTD ^= (1 << PD7);
+    PORTD ^= (1 << PD7);
     cycle++;
-     h4 = 1;
-     h5 = 1;
+    h4 = 1;
+    h5 = 1;
 
     for (int x = 0; x <= ringsize - 1 ; x++) {
       ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
@@ -322,7 +332,30 @@ void loop() {
     timer = TCNT2 + multi;
     timer = F_CPU / timer;
     timer = timer / 1024;
-    
+
+
+    if (debug == true) {
+
+
+      if (cycle / timer < 10) {
+        debugcount = 0;
+        freqsum4 = 500;
+        freqsum5 = 500;
+      }
+      if (cycle / timer > 10 && cycle / timer < 20) {
+        freqsum4 = 500;
+        freqsum5 = 500;
+        freqsum4 = freqsum4 + debugcount;
+        freqsum5 = freqsum5 + debugcount;
+        debugcount++;
+
+      }
+      if (cycle / timer > 20) {
+        freqsum4 = freqsum4 - debugcount / 100;
+        freqsum5 = freqsum5 - debugcount / 100;
+        debugcount++;
+      }
+    }
     // PORTD ^= (1 << PD7);
     Serial.print(  cycle, DEC);
     Serial.print(";");
@@ -331,9 +364,9 @@ void loop() {
     Serial.print(  freqsum4, DEC);
     Serial.print(";");
     Serial.print( freqsum5, DEC);
-    if (thermo&&cycle>lastcycle+thermocycle){
-     c = thermocouple.readCelsius();
-      lastcycle=cycle;
+    if (thermo && cycle > lastcycle + thermocycle) {
+      c = thermocouple.readCelsius();
+      lastcycle = cycle;
     }
     Serial.print(";");
     Serial.print( c, 2);
