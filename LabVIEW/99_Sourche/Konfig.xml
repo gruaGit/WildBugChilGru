@@ -21,11 +21,11 @@
 <Val>0.61300000000000</Val>
 </DBL>
 <DBL>
-<Name>Rollenträgheit [kgm²]</Name>
+<Name>RollentrÃ¤gheit [kgmÂ²]</Name>
 <Val>0.51300000000000</Val>
 </DBL>
 <U8>
-<Name>Zündung [Imp/U]</Name>
+<Name>ZÃ¼ndung [Imp/U]</Name>
 <Val>1</Val>
 </U8>
 <DBL>
@@ -61,7 +61,7 @@
 <Val>0.00000000000000</Val>
 </DBL>
 <DBL>
-<Name>Lufttemperatur [°C]</Name>
+<Name>Lufttemperatur [Â°C]</Name>
 <Val>29.00000000000000</Val>
 </DBL>
 <DBL>
@@ -19425,7 +19425,7 @@
 </DBL>
 </Array>
 <U8>
-<Name>Übersetzung ermitteln aus</Name>
+<Name>Ãœbersetzung ermitteln aus</Name>
 <Val>0</Val>
 </U8>
 <DBL>
