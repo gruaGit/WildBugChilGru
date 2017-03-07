@@ -15,7 +15,7 @@
 		<Item Name="ReCalc_V0.16.vi" Type="VI" URL="../ReCalc_V0.16.vi"/>
 		<Item Name="savecluster_V0.01.vi" Type="VI" URL="../savecluster_V0.01.vi"/>
 		<Item Name="WildBugChilGru.ico" Type="Document" URL="../WildBugChilGru.ico"/>
-		<Item Name="WildBugChilGru_V1.01.vi" Type="VI" URL="../WildBugChilGru_V1.01.vi"/>
+		<Item Name="WildBugChilGru_V1.0.2.vi" Type="VI" URL="../WildBugChilGru_V1.0.2.vi"/>
 		<Item Name="Abhängigkeiten" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
@@ -129,6 +129,7 @@
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A8439469-0CB1-4769-A2D0-D2432BEE9614}</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Bld_version.patch" Type="Int">2</Property>
 				<Property Name="Destination[0].destName" Type="Str">WildBugChilGru.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../01_EXE/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -138,7 +139,7 @@
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/Mein Computer/WildBugChilGru.ico</Property>
 				<Property Name="Source[0].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[0].itemID" Type="Str">{A9B855B2-1F9E-4A61-954B-3F0EF0AAC082}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{ADA34524-6E68-4D37-B8C6-9FDB644F22B7}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/printgraph_V0.01.vi</Property>
@@ -156,7 +157,7 @@
 				<Property Name="Source[4].itemID" Type="Ref">/Mein Computer/Konfig.xml</Property>
 				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref">/Mein Computer/WildBugChilGru_V1.01.vi</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/Mein Computer/WildBugChilGru_V1.0.2.vi</Property>
 				<Property Name="Source[5].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[5].type" Type="Str">VI</Property>
 				<Property Name="SourceCount" Type="Int">6</Property>
