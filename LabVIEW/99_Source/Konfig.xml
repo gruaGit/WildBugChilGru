@@ -1,6 +1,6 @@
 <?xml version='1.0' standalone='yes' ?>
 <LVData xmlns="http://www.ni.com/LVData">
-<Version>15.0</Version>
+<Version>14.0.1f3</Version>
 <Cluster>
 <Name>Datenspeicher</Name>
 <NumElts>30</NumElts>
@@ -14,27 +14,27 @@
 </String>
 <U16>
 <Name>Rolle [Inkr/U]</Name>
-<Val>0</Val>
+<Val>200</Val>
 </U16>
 <DBL>
 <Name>Rollenumfang [m]</Name>
-<Val>0.00000000000000</Val>
+<Val>0.61300000000000</Val>
 </DBL>
 <DBL>
-<Name>RollentrÃ¤gheit [kgmÂ²]</Name>
-<Val>0.00000000000000</Val>
+<Name>Rollenträgheit [kgm²]</Name>
+<Val>0.40200000000000</Val>
 </DBL>
 <U8>
-<Name>ZÃ¼ndung [Imp/U]</Name>
-<Val>0</Val>
+<Name>Zündung [Imp/U]</Name>
+<Val>1</Val>
 </U8>
 <DBL>
 <Name>Getriebe [1:]</Name>
-<Val>0.00000000000000</Val>
+<Val>5.34300000000000</Val>
 </DBL>
 <DBL>
 <Name>Reifenumfang [m] </Name>
-<Val>0.00000000000000</Val>
+<Val>1.25000000000000</Val>
 </DBL>
 <DBL>
 <Name>element</Name>
@@ -42,15 +42,15 @@
 </DBL>
 <U8>
 <Name>Gl. Mittelwert</Name>
-<Val>0</Val>
+<Val>35</Val>
 </U8>
 <U8>
 <Name>Differenzenquotient</Name>
-<Val>0</Val>
+<Val>12</Val>
 </U8>
 <U8>
 <Name>Polynom</Name>
-<Val>0</Val>
+<Val>15</Val>
 </U8>
 <DBL>
 <Name>element</Name>
@@ -61,16 +61,16 @@
 <Val>0.00000000000000</Val>
 </DBL>
 <DBL>
-<Name>Lufttemperatur [Â°C]</Name>
-<Val>0.00000000000000</Val>
+<Name>Lufttemperatur [°C]</Name>
+<Val>20.00000000000000</Val>
 </DBL>
 <DBL>
 <Name>Luftfeuchtigkeit [%]</Name>
-<Val>0.00000000000000</Val>
+<Val>50.00000000000000</Val>
 </DBL>
 <DBL>
 <Name>Luftdruck [mbar]</Name>
-<Val>0.00000000000000</Val>
+<Val>1013.00000000000000</Val>
 </DBL>
 <Array>
 <Name></Name>
@@ -105,12 +105,12 @@
 </DBL>
 </Array>
 <U8>
-<Name>Ãœbersetzung ermitteln aus</Name>
+<Name>Übersetzung ermitteln aus</Name>
 <Val>0</Val>
 </U8>
 <DBL>
 <Name>[s]</Name>
-<Val>0.00000000000000</Val>
+<Val>5.00000000000000</Val>
 </DBL>
 <DBL>
 <Name>nmin [1/min]</Name>
@@ -122,7 +122,7 @@
 </DBL>
 <DBL>
 <Name>n vom Gas [1/min]</Name>
-<Val>0.00000000000000</Val>
+<Val>4999.99999999999999</Val>
 </DBL>
 <Array>
 <Name></Name>
@@ -147,7 +147,7 @@
 <Refnum>
 <Name>Serielle Schnittstelle</Name>
 <RefKind>VISA</RefKind>
-<Val></Val>
+<Val>COM6</Val>
 </Refnum>
 </Cluster>
 </LVData>
