@@ -10,13 +10,13 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="converter_v2.vi" Type="VI" URL="../converter_v2.vi"/>
+		<Item Name="Converter_1.0.2_to_1.0.3.vi" Type="VI" URL="../Converter_1.0.2_to_1.0.3.vi"/>
 		<Item Name="Konfig.xml" Type="Document" URL="../Konfig.xml"/>
 		<Item Name="printgraph_V0.01.vi" Type="VI" URL="../printgraph_V0.01.vi"/>
 		<Item Name="ReCalc_V0.16.vi" Type="VI" URL="../ReCalc_V0.16.vi"/>
 		<Item Name="savecluster_V0.01.vi" Type="VI" URL="../savecluster_V0.01.vi"/>
 		<Item Name="WildBugChilGru.ico" Type="Document" URL="../WildBugChilGru.ico"/>
-		<Item Name="WildBugChilGru_V1.0.2.vi" Type="VI" URL="../WildBugChilGru_V1.0.2.vi"/>
+		<Item Name="WildBugChilGru_V1.0.3.vi" Type="VI" URL="../WildBugChilGru_V1.0.3.vi"/>
 		<Item Name="Abhängigkeiten" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
@@ -114,46 +114,44 @@
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 		</Item>
 		<Item Name="Build-Spezifikationen" Type="Build">
-			<Item Name="Converter" Type="EXE">
+			<Item Name="Converter_1.0.2_to_1.0.3" Type="EXE">
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
 				<Property Name="App_INI_aliasGUID" Type="Str">{7AC51B01-C1AF-4E2F-A769-1232100BCD8B}</Property>
 				<Property Name="App_INI_GUID" Type="Str">{0FF4420D-DDB5-4FE7-A2E0-201044F1B0B1}</Property>
 				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
 				<Property Name="App_winsec.description" Type="Str">http://www.Microsoft.com</Property>
-				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{23333F97-CEB5-4BD9-84AA-F32318D7EABB}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">Converter</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">Converter_1.0.2_to_1.0.3</Property>
 				<Property Name="Bld_defaultLanguage" Type="Str">German</Property>
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/Converter</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../01_EXE</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{2203D7E7-644D-4A02-9570-C22ACD74FC6B}</Property>
-				<Property Name="Bld_version.build" Type="Int">1</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Destination[0].destName" Type="Str">Converter.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Converter/Converter.exe</Property>
+				<Property Name="Destination[0].destName" Type="Str">Converter_1.0.2_to_1.0.3.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../01_EXE/Converter_1.0.2_to_1.0.3.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Hilfsdatei-Verzeichnis</Property>
-				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/Converter/data</Property>
+				<Property Name="Destination[1].path" Type="Path">../01_EXE</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{7CD15AB9-89F5-42C8-AA32-744D8E94B70D}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{C6871B91-704E-44FE-A4B7-9C255BD7C776}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/converter_v2.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/Converter_1.0.2_to_1.0.3.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="SourceCount" Type="Int">2</Property>
 				<Property Name="TgtF_companyName" Type="Str">Microsoft</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">Converter</Property>
-				<Property Name="TgtF_internalName" Type="Str">Converter</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Konvertiert XML-Dateien aus WildBugChilGru 1.0.2 nach 1.0.3</Property>
+				<Property Name="TgtF_internalName" Type="Str">Converter_1.0.2_to_1.0.3</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2017 Microsoft</Property>
-				<Property Name="TgtF_productName" Type="Str">Converter</Property>
+				<Property Name="TgtF_productName" Type="Str">Converter_1.0.2_to_1.0.3</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{140E46EC-C9D9-4C7F-B72B-504D6934E2C8}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">Converter.exe</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">Converter_1.0.2_to_1.0.3.exe</Property>
 			</Item>
 			<Item Name="WildBugChilGru" Type="EXE">
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
@@ -171,7 +169,7 @@
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A8439469-0CB1-4769-A2D0-D2432BEE9614}</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Bld_version.patch" Type="Int">2</Property>
+				<Property Name="Bld_version.patch" Type="Int">3</Property>
 				<Property Name="Destination[0].destName" Type="Str">WildBugChilGru.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../01_EXE/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -181,7 +179,7 @@
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/Mein Computer/WildBugChilGru.ico</Property>
 				<Property Name="Source[0].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[0].itemID" Type="Str">{ADA34524-6E68-4D37-B8C6-9FDB644F22B7}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{C6871B91-704E-44FE-A4B7-9C255BD7C776}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/printgraph_V0.01.vi</Property>
@@ -199,7 +197,7 @@
 				<Property Name="Source[4].itemID" Type="Ref">/Mein Computer/Konfig.xml</Property>
 				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref">/Mein Computer/WildBugChilGru_V1.0.2.vi</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/Mein Computer/WildBugChilGru_V1.0.3.vi</Property>
 				<Property Name="Source[5].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[5].type" Type="Str">VI</Property>
 				<Property Name="SourceCount" Type="Int">6</Property>
