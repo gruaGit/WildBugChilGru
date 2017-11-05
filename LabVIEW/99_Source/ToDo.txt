@@ -1,6 +1,0 @@
-M nicht mehr abspeichern
-P nicht mehr abspeichern
-
-Überlagern in ReCalc geht nicht mehr
-
-Testen ob bei Überlagern immer aus nRolleUngefiltert neu berechnet, indem man im XML Filterwert massiv ändert
