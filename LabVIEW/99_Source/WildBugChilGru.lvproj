@@ -16,7 +16,7 @@
 		<Item Name="ReCalc_V2.00.vi" Type="VI" URL="../ReCalc_V2.00.vi"/>
 		<Item Name="savecluster_V0.01.vi" Type="VI" URL="../savecluster_V0.01.vi"/>
 		<Item Name="WildBugChilGru.ico" Type="Document" URL="../WildBugChilGru.ico"/>
-		<Item Name="WildBugChilGru_V2.0.1.vi" Type="VI" URL="../WildBugChilGru_V2.0.1.vi"/>
+		<Item Name="WildBugChilGru.vi" Type="VI" URL="../WildBugChilGru.vi"/>
 		<Item Name="Abhängigkeiten" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
@@ -179,7 +179,7 @@
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/Mein Computer/WildBugChilGru.ico</Property>
 				<Property Name="Source[0].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[0].itemID" Type="Str">{3242EA24-DBF0-4C99-B498-AAE81AFF14AE}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{B0983965-DDE6-4122-9301-CF36BB225E7C}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/printgraph_V0.01.vi</Property>
@@ -197,7 +197,7 @@
 				<Property Name="Source[4].itemID" Type="Ref">/Mein Computer/Konfig.xml</Property>
 				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref">/Mein Computer/WildBugChilGru_V2.0.1.vi</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/Mein Computer/WildBugChilGru.vi</Property>
 				<Property Name="Source[5].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[5].type" Type="Str">VI</Property>
 				<Property Name="SourceCount" Type="Int">6</Property>
