@@ -17,7 +17,7 @@
 
 //changes in 1.02:
 //1. own ringsizes for ignition and role
-//2. void BME280() renamed to void BME280Read()
+//2. void BME280() renamed to void BME280read()
 //---------------------------------------------
 
 //-------------------SETUP---------------------------------------
