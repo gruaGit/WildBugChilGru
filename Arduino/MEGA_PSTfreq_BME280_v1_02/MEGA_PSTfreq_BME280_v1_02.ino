@@ -13,13 +13,21 @@
 //sendCycle;Messfrequenz;Frequenz Kanal1(Pin49);Frequenz Kanal2(Pin48);Max31855 Thermocouple read
 //------------------------------------------------------------------------
 //Debug Output Pin38   PORTD ^= (1 << PD7);
-//Built 1.01 02.03.2017
+//Build 1.02 11.02.2019
+
+//changes in 1.02:
+//1. own ringsizes for ignition and role
+//2. void BME280() renamed to void BME280Read()
 //---------------------------------------------
 
 //-------------------SETUP---------------------------------------
 uint32_t baud = 115200;
-int comlevel = 1;                    	// increase for lower data transfer frequenz 1 approx. 45Hz
-int ringsize = 50;                 		// size of Ringbuffer
+
+int comlevel = 1;			// increase for lower data transfer frequenz 1 approx. 45Hz
+#define RINGSIZEIGNITION 5	// size of ringbuffer for ignition-signal 
+							// (less smoothing than roll-signal due to fewer ignition-pulses than roll-pulses per revolution)
+#define RINGSIZEROLE 50		// size of Ringbuffer Role 
+							// (decrease for faster response of roll-signal, e.g. for encoders with very few pulses per revolution)
 uint16_t thermocycle = 25;
 bool thermo = false;                   	// MAX31855 Data (Thermoelement) send yes or no
 int p_cor = 500;							// Correction for BME280 Pressure Measurement in Pa
@@ -35,31 +43,31 @@ bool debug = false;
 
 
 
-volatile uint32_t  StartTime4[50];        // ICR4-Wert bei 1.High-Flanke speichern
-volatile uint32_t  EndTime4[50];          // ICR4-Wert bei 2.High-Flanke speicher
-volatile int ovlCAPTst4[50];
-volatile int ovlCAPTend4[50];
-volatile int Messung4[50];
+volatile uint32_t  StartTime4[RINGSIZEIGNITION];        // ICR4-Wert bei 1.High-Flanke speichern
+volatile uint32_t  EndTime4[RINGSIZEIGNITION];          // ICR4-Wert bei 2.High-Flanke speicher
+volatile int ovlCAPTst4[RINGSIZEIGNITION];
+volatile int ovlCAPTend4[RINGSIZEIGNITION];
+volatile int Messung4[RINGSIZEIGNITION];
 volatile int ErsteFlanke4 = 0;
 volatile int ovlTIM4 = 0;
 
-volatile uint32_t  StartTime5[50];        // ICR5-Wert bei 1.High-Flanke speichern
-volatile uint32_t  EndTime5[50];          // ICR5-Wert bei 2.High-Flanke speicher
-volatile int ovlCAPTst5[50];
-volatile int ovlCAPTend5[50];
-volatile int Messung5[50];
+volatile uint32_t  StartTime5[RINGSIZEROLE];        // ICR5-Wert bei 1.High-Flanke speichern
+volatile uint32_t  EndTime5[RINGSIZEROLE];          // ICR5-Wert bei 2.High-Flanke speicher
+volatile int ovlCAPTst5[RINGSIZEROLE];
+volatile int ovlCAPTend5[RINGSIZEROLE];
+volatile int Messung5[RINGSIZEROLE];
 volatile int ErsteFlanke5 = 0;
 volatile int ovlTIM5 = 0;
 
 
 uint32_t freqsum4;
 uint32_t freqsum5;
-uint32_t pulse4[50];
-uint32_t freq4[50];
-uint32_t pulse5[50];
-uint32_t freq5[50];
-uint32_t shift4[50];
-uint32_t shift5[50];
+uint32_t pulse4[RINGSIZEIGNITION];
+uint32_t freq4[RINGSIZEIGNITION];
+uint32_t pulse5[RINGSIZEROLE];
+uint32_t freq5[RINGSIZEROLE];
+uint32_t shift4[RINGSIZEIGNITION];
+uint32_t shift5[RINGSIZEROLE];
 
 uint16_t debugcount;
 double timer;
@@ -119,7 +127,7 @@ void serialEvent() {
 }
 
 //----------BME280--------------
-void BME280() {
+void BME280read() {
   Serial.begin(57600);	//BME280 communicates on 57600 115200
   if (initial) {
     _delay_ms(10);
@@ -241,12 +249,14 @@ void setup() {
 
   sei();
   //----------------INIT Ringbuffer = 0-----------------------------
-  for (int x = 0; x <= ringsize - 1 ; x++) {
+  for (int x = 0; x <= RINGSIZEIGNITION - 1 ; x++) {
     pulse4[x] = 0;
-    pulse5[x] = 0;
     freq4[x] = 0;
-    freq5[x] = 0;
     shift4[x] = 0;
+  }
+  for (int x = 0; x <= RINGSIZEROLE - 1 ; x++) {
+    pulse5[x] = 0;
+    freq5[x] = 0;
     shift5[x] = 0;
   }
 }
@@ -265,7 +275,7 @@ void loop() {
   if (Serial.available() > 0) serialEvent();
 
   if (stringComplete && inputString == "e" ) {
-    BME280();
+    BME280read();
     Serial.print(Temp, 1);
     Serial.print(";");
     Serial.print(P, 0);
@@ -297,7 +307,7 @@ void loop() {
     h4 = 1;
     h5 = 1;
 
-    for (int x = 0; x <= ringsize - 1 ; x++) {
+    for (int x = 0; x <= RINGSIZEIGNITION - 1 ; x++) {
       ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
         if (Messung4[x] == 1) {
           h4++;
@@ -310,7 +320,7 @@ void loop() {
       }
     }
 
-    for (int x = 0; x <= ringsize - 1 ; x++) {
+    for (int x = 0; x <= RINGSIZEROLE - 1 ; x++) {
       ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
         if (Messung5[x] == 1) {
           h5++;
@@ -432,7 +442,7 @@ ISR(TIMER4_CAPT_vect) {
     TIFR4 |= (1 << ICF4);
     i++;
     //-------End of ringsize
-    if (i == ringsize) {
+    if (i == RINGSIZEIGNITION) {
       i = 0;
     }
   }
@@ -466,7 +476,7 @@ ISR(TIMER5_CAPT_vect) {
     TIFR5 |= (1 << ICF5);
     j++;
     //-------End of ringsize
-    if (j == ringsize) {
+    if (j == RINGSIZEROLE) {
       j = 0;
     }
   }
