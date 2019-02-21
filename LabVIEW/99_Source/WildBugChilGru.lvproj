@@ -169,7 +169,7 @@
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A8439469-0CB1-4769-A2D0-D2432BEE9614}</Property>
 				<Property Name="Bld_version.major" Type="Int">2</Property>
-				<Property Name="Bld_version.patch" Type="Int">2</Property>
+				<Property Name="Bld_version.patch" Type="Int">3</Property>
 				<Property Name="Destination[0].destName" Type="Str">WildBugChilGru.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../01_EXE/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -179,7 +179,7 @@
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/Mein Computer/WildBugChilGru.ico</Property>
 				<Property Name="Source[0].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[0].itemID" Type="Str">{E04E7CC9-445B-4B2B-88B0-ED176BB8B76F}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{B695C75F-DFC7-4F30-B085-67C8F8335010}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/printgraph_V0.01.vi</Property>
