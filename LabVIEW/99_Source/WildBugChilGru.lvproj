@@ -179,7 +179,7 @@
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/Mein Computer/WildBugChilGru.ico</Property>
 				<Property Name="Source[0].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[0].itemID" Type="Str">{B695C75F-DFC7-4F30-B085-67C8F8335010}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{D05AEE42-33B8-4F1F-8955-5CCE1921272D}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/printgraph_V0.01.vi</Property>
