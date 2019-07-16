@@ -22,7 +22,7 @@
 </DBL>
 <DBL>
 <Name>Rollenträgheit [kgm²]</Name>
-<Val>0.40200000000000</Val>
+<Val>0.43300000000000</Val>
 </DBL>
 <DBL>
 <Name>Zündung [Imp/U]</Name>
@@ -42,11 +42,11 @@
 </DBL>
 <U8>
 <Name>Gl. Mittelwert</Name>
-<Val>35</Val>
+<Val>32</Val>
 </U8>
 <U8>
 <Name>Differenzenquotient</Name>
-<Val>12</Val>
+<Val>14</Val>
 </U8>
 <U8>
 <Name>Polynom</Name>
@@ -1290,7 +1290,7 @@
 </DBL>
 <DBL>
 <Name>n vom Gas [1/min]</Name>
-<Val>4999.99999999999999</Val>
+<Val>6000.00000000000000</Val>
 </DBL>
 <Array>
 <Name>dT-Array [s]</Name>
