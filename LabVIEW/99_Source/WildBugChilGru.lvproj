@@ -115,7 +115,9 @@
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="LoadCluster(SubVI)2.0.5.vi" Type="VI" URL="../LoadCluster(SubVI)2.0.5.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
+			<Item Name="Tachomodus (SubVI).vi" Type="VI" URL="../Tachomodus (SubVI).vi"/>
 		</Item>
 		<Item Name="Build-Spezifikationen" Type="Build">
 			<Item Name="Converter_1.0.2_to_1.0.3" Type="EXE">
