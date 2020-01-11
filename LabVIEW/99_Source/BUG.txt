@@ -1,0 +1,4 @@
+Recalc:
+Öffnen
+Vergleichen
+Öffnen --> Abbrechen --> öffnet trotzdem

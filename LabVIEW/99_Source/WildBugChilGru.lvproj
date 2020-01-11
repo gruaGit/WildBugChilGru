@@ -10,11 +10,12 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="Converter_1.0.2_to_1.0.3.vi" Type="VI" URL="../Converter_1.0.2_to_1.0.3.vi"/>
 		<Item Name="Konfig.xml" Type="Document" URL="../Konfig.xml"/>
+		<Item Name="LoadCluster(SubVI)2.0.5.vi" Type="VI" URL="../LoadCluster(SubVI)2.0.5.vi"/>
 		<Item Name="printgraph_V0.01.vi" Type="VI" URL="../printgraph_V0.01.vi"/>
 		<Item Name="ReCalc_V2.00.vi" Type="VI" URL="../ReCalc_V2.00.vi"/>
 		<Item Name="savecluster_V0.01.vi" Type="VI" URL="../savecluster_V0.01.vi"/>
+		<Item Name="Tachomodus (SubVI).vi" Type="VI" URL="../Tachomodus (SubVI).vi"/>
 		<Item Name="WildBugChilGru.ico" Type="Document" URL="../WildBugChilGru.ico"/>
 		<Item Name="WildBugChilGru.vi" Type="VI" URL="../WildBugChilGru.vi"/>
 		<Item Name="Abhängigkeiten" Type="Dependencies">
@@ -28,7 +29,6 @@
 				<Item Name="Check File Permissions.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Check File Permissions.vi"/>
 				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
 				<Item Name="Check Path.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Check Path.vi"/>
-				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 				<Item Name="Close Registry Key.vi" Type="VI" URL="/&lt;vilib&gt;/registry/registry.llb/Close Registry Key.vi"/>
 				<Item Name="Color to RGB.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/colorconv.llb/Color to RGB.vi"/>
 				<Item Name="compatCalcOffset.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/compatCalcOffset.vi"/>
@@ -115,50 +115,9 @@
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="LoadCluster(SubVI)2.0.5.vi" Type="VI" URL="../LoadCluster(SubVI)2.0.5.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
-			<Item Name="Tachomodus (SubVI).vi" Type="VI" URL="../Tachomodus (SubVI).vi"/>
 		</Item>
 		<Item Name="Build-Spezifikationen" Type="Build">
-			<Item Name="Converter_1.0.2_to_1.0.3" Type="EXE">
-				<Property Name="App_copyErrors" Type="Bool">true</Property>
-				<Property Name="App_INI_aliasGUID" Type="Str">{7AC51B01-C1AF-4E2F-A769-1232100BCD8B}</Property>
-				<Property Name="App_INI_GUID" Type="Str">{0FF4420D-DDB5-4FE7-A2E0-201044F1B0B1}</Property>
-				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
-				<Property Name="App_winsec.description" Type="Str">http://www.Microsoft.com</Property>
-				<Property Name="Bld_buildCacheID" Type="Str">{23333F97-CEB5-4BD9-84AA-F32318D7EABB}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">Converter_1.0.2_to_1.0.3</Property>
-				<Property Name="Bld_defaultLanguage" Type="Str">German</Property>
-				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
-				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
-				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../01_EXE</Property>
-				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
-				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
-				<Property Name="Bld_previewCacheID" Type="Str">{2203D7E7-644D-4A02-9570-C22ACD74FC6B}</Property>
-				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Destination[0].destName" Type="Str">Converter_1.0.2_to_1.0.3.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../01_EXE/Converter_1.0.2_to_1.0.3.exe</Property>
-				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
-				<Property Name="Destination[0].type" Type="Str">App</Property>
-				<Property Name="Destination[1].destName" Type="Str">Hilfsdatei-Verzeichnis</Property>
-				<Property Name="Destination[1].path" Type="Path">../01_EXE</Property>
-				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{C6871B91-704E-44FE-A4B7-9C255BD7C776}</Property>
-				<Property Name="Source[0].type" Type="Str">Container</Property>
-				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/Converter_1.0.2_to_1.0.3.vi</Property>
-				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
-				<Property Name="Source[1].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">2</Property>
-				<Property Name="TgtF_companyName" Type="Str">Microsoft</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">Konvertiert XML-Dateien aus WildBugChilGru 1.0.2 nach 1.0.3</Property>
-				<Property Name="TgtF_internalName" Type="Str">Converter_1.0.2_to_1.0.3</Property>
-				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2017 Microsoft</Property>
-				<Property Name="TgtF_productName" Type="Str">Converter_1.0.2_to_1.0.3</Property>
-				<Property Name="TgtF_targetfileGUID" Type="Str">{140E46EC-C9D9-4C7F-B72B-504D6934E2C8}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">Converter_1.0.2_to_1.0.3.exe</Property>
-			</Item>
 			<Item Name="WildBugChilGru" Type="EXE">
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
 				<Property Name="App_INI_aliasGUID" Type="Str">{A44586B6-F286-4ED4-BAD2-7A0A26AAA7EE}</Property>
@@ -185,7 +144,7 @@
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/Mein Computer/WildBugChilGru.ico</Property>
 				<Property Name="Source[0].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[0].itemID" Type="Str">{282B2418-B650-4C67-9267-878C07A17FA9}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{583D4C43-40B6-4B7B-B6EF-DEEB38536E12}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/printgraph_V0.01.vi</Property>
@@ -206,7 +165,15 @@
 				<Property Name="Source[5].itemID" Type="Ref">/Mein Computer/WildBugChilGru.vi</Property>
 				<Property Name="Source[5].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[5].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">6</Property>
+				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/Mein Computer/LoadCluster(SubVI)2.0.5.vi</Property>
+				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[6].type" Type="Str">VI</Property>
+				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/Mein Computer/Tachomodus (SubVI).vi</Property>
+				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[7].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">8</Property>
 				<Property Name="TgtF_companyName" Type="Str">WildBugChilGru</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Leistungsprüfstand auf Basis von Arduino Mega und LabView</Property>
 				<Property Name="TgtF_internalName" Type="Str">WildBugChilGru</Property>
