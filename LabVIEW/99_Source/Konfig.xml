@@ -19898,7 +19898,7 @@
 </Array>
 <U8>
 <Name>Übersetzung ermitteln aus</Name>
-<Val>1</Val>
+<Val>0</Val>
 </U8>
 <DBL>
 <Name>[s]</Name>
@@ -19921,7 +19921,7 @@
 <Dimsize>1238</Dimsize>
 <DBL>
 <Name>dT</Name>
-<Val>1.96078431372549E-2</Val>
+<Val>2.22222222222222E-2</Val>
 </DBL>
 <DBL>
 <Name>dT</Name>
@@ -24891,7 +24891,7 @@
 </Refnum>
 <DBL>
 <Name>nKuWe/nRolle</Name>
-<Val>200.00000000000000</Val>
+<Val>20.00000000000000</Val>
 </DBL>
 <DBL>
 <Name>v vom Gas [km/h]</Name>
