@@ -11,10 +11,15 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Konfig.xml" Type="Document" URL="../Konfig.xml"/>
+		<Item Name="KorrekturfaktorDin70020 (SubVI).vi" Type="VI" URL="../KorrekturfaktorDin70020 (SubVI).vi"/>
 		<Item Name="LoadCluster(SubVI)2.0.5.vi" Type="VI" URL="../LoadCluster(SubVI)2.0.5.vi"/>
+		<Item Name="MessungKlimadaten(SubVI).vi" Type="VI" URL="../MessungKlimadaten(SubVI).vi"/>
+		<Item Name="n2v (SubVI).vi" Type="VI" URL="../n2v (SubVI).vi"/>
 		<Item Name="printgraph_V0.01.vi" Type="VI" URL="../printgraph_V0.01.vi"/>
 		<Item Name="ReCalc_V2.00.vi" Type="VI" URL="../ReCalc_V2.00.vi"/>
 		<Item Name="savecluster_V0.01.vi" Type="VI" URL="../savecluster_V0.01.vi"/>
+		<Item Name="Scale_Graph_Y2 (SubVI).vi" Type="VI" URL="../Scale_Graph_Y2 (SubVI).vi"/>
+		<Item Name="Stringhandling(SubVI)0.0.2.vi" Type="VI" URL="../Stringhandling(SubVI)0.0.2.vi"/>
 		<Item Name="Tachomodus (SubVI).vi" Type="VI" URL="../Tachomodus (SubVI).vi"/>
 		<Item Name="WildBugChilGru.ico" Type="Document" URL="../WildBugChilGru.ico"/>
 		<Item Name="WildBugChilGru.vi" Type="VI" URL="../WildBugChilGru.vi"/>
@@ -30,6 +35,7 @@
 				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
 				<Item Name="Check Path.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Check Path.vi"/>
 				<Item Name="Close Registry Key.vi" Type="VI" URL="/&lt;vilib&gt;/registry/registry.llb/Close Registry Key.vi"/>
+				<Item Name="Color to RGB.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/colorconv.llb/Color to RGB.vi"/>
 				<Item Name="compatCalcOffset.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/compatCalcOffset.vi"/>
 				<Item Name="compatFileDialog.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/compatFileDialog.vi"/>
 				<Item Name="compatOpenFileOperation.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/compatOpenFileOperation.vi"/>
@@ -116,10 +122,7 @@
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="KorrekturfaktorDin70020 (SubVI).vi" Type="VI" URL="../KorrekturfaktorDin70020 (SubVI).vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
-			<Item Name="MessungKlimadaten(SubVI).vi" Type="VI" URL="../MessungKlimadaten(SubVI).vi"/>
-			<Item Name="Stringhandling(SubVI)0.0.2.vi" Type="VI" URL="../Stringhandling(SubVI)0.0.2.vi"/>
 		</Item>
 		<Item Name="Build-Spezifikationen" Type="Build">
 			<Item Name="WildBugChilGru" Type="EXE">
@@ -148,12 +151,24 @@
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/Mein Computer/WildBugChilGru.ico</Property>
 				<Property Name="Source[0].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[0].itemID" Type="Str">{583D4C43-40B6-4B7B-B6EF-DEEB38536E12}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{E3A68381-93BC-43F8-A559-518A634806E4}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/printgraph_V0.01.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[10].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[10].itemID" Type="Ref">/Mein Computer/n2v (SubVI).vi</Property>
+				<Property Name="Source[10].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[10].type" Type="Str">VI</Property>
+				<Property Name="Source[11].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[11].itemID" Type="Ref">/Mein Computer/Scale_Graph_Y2 (SubVI).vi</Property>
+				<Property Name="Source[11].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[11].type" Type="Str">VI</Property>
+				<Property Name="Source[12].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[12].itemID" Type="Ref">/Mein Computer/Stringhandling(SubVI)0.0.2.vi</Property>
+				<Property Name="Source[12].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[12].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[2].itemID" Type="Ref">/Mein Computer/ReCalc_V2.00.vi</Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
@@ -177,7 +192,15 @@
 				<Property Name="Source[7].itemID" Type="Ref">/Mein Computer/Tachomodus (SubVI).vi</Property>
 				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[7].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">8</Property>
+				<Property Name="Source[8].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[8].itemID" Type="Ref">/Mein Computer/KorrekturfaktorDin70020 (SubVI).vi</Property>
+				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[8].type" Type="Str">VI</Property>
+				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[9].itemID" Type="Ref">/Mein Computer/MessungKlimadaten(SubVI).vi</Property>
+				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[9].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">13</Property>
 				<Property Name="TgtF_companyName" Type="Str">WildBugChilGru</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Leistungsprüfstand auf Basis von Arduino Mega und LabView</Property>
 				<Property Name="TgtF_internalName" Type="Str">WildBugChilGru</Property>
