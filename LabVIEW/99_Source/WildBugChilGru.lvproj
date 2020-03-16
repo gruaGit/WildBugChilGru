@@ -18,7 +18,8 @@
 		<Item Name="printgraph_V0.01.vi" Type="VI" URL="../printgraph_V0.01.vi"/>
 		<Item Name="ReCalc_V2.00.vi" Type="VI" URL="../ReCalc_V2.00.vi"/>
 		<Item Name="savecluster_V0.01.vi" Type="VI" URL="../savecluster_V0.01.vi"/>
-		<Item Name="Scale_Graph_Y2 (SubVI).vi" Type="VI" URL="../Scale_Graph_Y2 (SubVI).vi"/>
+		<Item Name="Scale_Graph_X (SubVI).vi" Type="VI" URL="../Scale_Graph_X (SubVI).vi"/>
+		<Item Name="Scale_Graph_Y (SubVI).vi" Type="VI" URL="../Scale_Graph_Y (SubVI).vi"/>
 		<Item Name="Stringhandling(SubVI)0.0.2.vi" Type="VI" URL="../Stringhandling(SubVI)0.0.2.vi"/>
 		<Item Name="Tachomodus (SubVI).vi" Type="VI" URL="../Tachomodus (SubVI).vi"/>
 		<Item Name="WildBugChilGru.ico" Type="Document" URL="../WildBugChilGru.ico"/>
@@ -150,7 +151,7 @@
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/Mein Computer/WildBugChilGru.ico</Property>
 				<Property Name="Source[0].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[0].itemID" Type="Str">{E3A68381-93BC-43F8-A559-518A634806E4}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{25D8998E-8D19-4F9E-9EDE-1E20724ED067}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/printgraph_V0.01.vi</Property>
@@ -161,13 +162,17 @@
 				<Property Name="Source[10].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[10].type" Type="Str">VI</Property>
 				<Property Name="Source[11].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[11].itemID" Type="Ref">/Mein Computer/Scale_Graph_Y2 (SubVI).vi</Property>
+				<Property Name="Source[11].itemID" Type="Ref">/Mein Computer/Stringhandling(SubVI)0.0.2.vi</Property>
 				<Property Name="Source[11].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[11].type" Type="Str">VI</Property>
 				<Property Name="Source[12].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[12].itemID" Type="Ref">/Mein Computer/Stringhandling(SubVI)0.0.2.vi</Property>
+				<Property Name="Source[12].itemID" Type="Ref">/Mein Computer/Scale_Graph_X (SubVI).vi</Property>
 				<Property Name="Source[12].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[12].type" Type="Str">VI</Property>
+				<Property Name="Source[13].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[13].itemID" Type="Ref">/Mein Computer/Scale_Graph_Y (SubVI).vi</Property>
+				<Property Name="Source[13].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[13].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[2].itemID" Type="Ref">/Mein Computer/ReCalc_V2.00.vi</Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
@@ -199,7 +204,7 @@
 				<Property Name="Source[9].itemID" Type="Ref">/Mein Computer/MessungKlimadaten(SubVI).vi</Property>
 				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[9].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">13</Property>
+				<Property Name="SourceCount" Type="Int">14</Property>
 				<Property Name="TgtF_companyName" Type="Str">WildBugChilGru</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Leistungsprüfstand auf Basis von Arduino Mega und LabView</Property>
 				<Property Name="TgtF_internalName" Type="Str">WildBugChilGru</Property>
