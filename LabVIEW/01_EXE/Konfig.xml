@@ -62,7 +62,7 @@
 </DBL>
 <DBL>
 <Name>Lufttemperatur [°C]</Name>
-<Val>20.00000000000000</Val>
+<Val>23.30000000000000</Val>
 </DBL>
 <DBL>
 <Name>Luftfeuchtigkeit [%]</Name>
@@ -19921,7 +19921,7 @@
 <Dimsize>1238</Dimsize>
 <DBL>
 <Name>dT</Name>
-<Val>2.56410256410256E-2</Val>
+<Val>1.66666666666667E-2</Val>
 </DBL>
 <DBL>
 <Name>dT</Name>
@@ -24882,7 +24882,7 @@
 </Array>
 <Boolean>
 <Name>Boolesch</Name>
-<Val>0</Val>
+<Val>1</Val>
 </Boolean>
 <Refnum>
 <Name>Serielle Schnittstelle</Name>
