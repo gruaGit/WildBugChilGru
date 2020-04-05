@@ -18,6 +18,7 @@
 		<Item Name="n2v (SubVI).vi" Type="VI" URL="../n2v (SubVI).vi"/>
 		<Item Name="printgraph_V0.01.vi" Type="VI" URL="../printgraph_V0.01.vi"/>
 		<Item Name="ReCalc_V2.00.vi" Type="VI" URL="../ReCalc_V2.00.vi"/>
+		<Item Name="Rollendrehzahl (SubVI).vi" Type="VI" URL="../Rollendrehzahl (SubVI).vi"/>
 		<Item Name="savecluster_V0.01.vi" Type="VI" URL="../savecluster_V0.01.vi"/>
 		<Item Name="Scale_Graph_X (SubVI).vi" Type="VI" URL="../Scale_Graph_X (SubVI).vi"/>
 		<Item Name="Scale_Graph_Y (SubVI).vi" Type="VI" URL="../Scale_Graph_Y (SubVI).vi"/>
@@ -153,7 +154,7 @@
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/Mein Computer/WildBugChilGru.ico</Property>
 				<Property Name="Source[0].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[0].itemID" Type="Str">{932B003C-8D4E-42F0-A3CD-08E8345BD540}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{F381EA29-30A5-48F3-A741-9A5286E82641}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/printgraph_V0.01.vi</Property>
@@ -183,6 +184,10 @@
 				<Property Name="Source[15].itemID" Type="Ref">/Mein Computer/Verlustmoment.vi</Property>
 				<Property Name="Source[15].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[15].type" Type="Str">VI</Property>
+				<Property Name="Source[16].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[16].itemID" Type="Ref">/Mein Computer/Rollendrehzahl (SubVI).vi</Property>
+				<Property Name="Source[16].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[16].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[2].itemID" Type="Ref">/Mein Computer/ReCalc_V2.00.vi</Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
@@ -214,7 +219,7 @@
 				<Property Name="Source[9].itemID" Type="Ref">/Mein Computer/MessungKlimadaten(SubVI).vi</Property>
 				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[9].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">16</Property>
+				<Property Name="SourceCount" Type="Int">17</Property>
 				<Property Name="TgtF_companyName" Type="Str">WildBugChilGru</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Leistungsprüfstand auf Basis von Arduino Mega und LabView</Property>
 				<Property Name="TgtF_internalName" Type="Str">WildBugChilGru</Property>
