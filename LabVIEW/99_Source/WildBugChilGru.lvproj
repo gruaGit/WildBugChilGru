@@ -24,7 +24,7 @@
 		<Item Name="Scale_Graph_Y (SubVI).vi" Type="VI" URL="../Scale_Graph_Y (SubVI).vi"/>
 		<Item Name="Stringhandling(SubVI)0.0.2.vi" Type="VI" URL="../Stringhandling(SubVI)0.0.2.vi"/>
 		<Item Name="Tachomodus (SubVI).vi" Type="VI" URL="../Tachomodus (SubVI).vi"/>
-		<Item Name="Verlustmoment.vi" Type="VI" URL="../Verlustmoment.vi"/>
+		<Item Name="Verlustmoment (SubVI).vi" Type="VI" URL="../Verlustmoment (SubVI).vi"/>
 		<Item Name="WildBugChilGru.ico" Type="Document" URL="../WildBugChilGru.ico"/>
 		<Item Name="WildBugChilGru.vi" Type="VI" URL="../WildBugChilGru.vi"/>
 		<Item Name="Abhängigkeiten" Type="Dependencies">
@@ -154,7 +154,7 @@
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/Mein Computer/WildBugChilGru.ico</Property>
 				<Property Name="Source[0].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[0].itemID" Type="Str">{F381EA29-30A5-48F3-A741-9A5286E82641}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{8AF9CDF1-0A9B-42B5-A731-F8414C49507F}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/printgraph_V0.01.vi</Property>
@@ -181,11 +181,11 @@
 				<Property Name="Source[14].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[14].type" Type="Str">VI</Property>
 				<Property Name="Source[15].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[15].itemID" Type="Ref">/Mein Computer/Verlustmoment.vi</Property>
+				<Property Name="Source[15].itemID" Type="Ref">/Mein Computer/Rollendrehzahl (SubVI).vi</Property>
 				<Property Name="Source[15].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[15].type" Type="Str">VI</Property>
 				<Property Name="Source[16].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[16].itemID" Type="Ref">/Mein Computer/Rollendrehzahl (SubVI).vi</Property>
+				<Property Name="Source[16].itemID" Type="Ref">/Mein Computer/Verlustmoment (SubVI).vi</Property>
 				<Property Name="Source[16].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[16].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
