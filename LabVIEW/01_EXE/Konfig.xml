@@ -66,7 +66,7 @@
 </DBL>
 <DBL>
 <Name>Mv: n1 [1/min]</Name>
-<Val>3000.00000000000000</Val>
+<Val>1.00000000000000</Val>
 </DBL>
 <DBL>
 <Name>Luftdruck [mbar]</Name>
@@ -40898,11 +40898,11 @@
 </DBL>
 <DBL>
 <Name>Mv: M0 [Nm]</Name>
-<Val>1.00000000000000</Val>
+<Val>0.00000000000000</Val>
 </DBL>
 <DBL>
 <Name>Mv: M1 [Nm]</Name>
-<Val>2.00000000000000</Val>
+<Val>0.00000000000000</Val>
 </DBL>
 <DBL>
 <Name>n vom Gas [1/min]</Name>
