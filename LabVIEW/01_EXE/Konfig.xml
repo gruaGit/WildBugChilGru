@@ -51135,7 +51135,7 @@
 </DBL>
 <DBL>
 <Name>v vom Gas [km/h]</Name>
-<Val>40.0000000000000</Val>
+<Val>40.00000000000000</Val>
 </DBL>
 </Cluster>
 </LVData>
