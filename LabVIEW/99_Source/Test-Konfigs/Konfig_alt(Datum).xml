@@ -9,8 +9,8 @@
 <Val></Val>
 </String>
 <String>
-<Name>Auto-Pfad</Name>
-<Val></Val>
+<Name>date/time string</Name>
+<Val>24.06.2019 17:41 </Val>
 </String>
 <U16>
 <Name>Rolle [Inkr/U]</Name>
@@ -19921,7 +19921,7 @@
 <Dimsize>1238</Dimsize>
 <DBL>
 <Name>dT</Name>
-<Val>3.12500000000000E-2</Val>
+<Val>3.22580645161290E-2</Val>
 </DBL>
 <DBL>
 <Name>dT</Name>
