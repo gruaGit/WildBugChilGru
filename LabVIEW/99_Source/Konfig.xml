@@ -10,7 +10,7 @@
 </String>
 <String>
 <Name>Auto-Pfad</Name>
-<Val>07.06.2020 20:37|</Val>
+<Val>08.06.2020 22:11|</Val>
 </String>
 <U16>
 <Name>Rolle [Inkr/U]</Name>
@@ -4769,7 +4769,7 @@
 <Dimsize>291</Dimsize>
 <DBL>
 <Name>dT</Name>
-<Val>1.85185185185185E-2</Val>
+<Val>3.22580645161290E-2</Val>
 </DBL>
 <DBL>
 <Name>dT</Name>
