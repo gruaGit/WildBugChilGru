@@ -49,7 +49,7 @@
 <Val>12</Val>
 </U8>
 <U8>
-<Name></Name>
+<Name>AFR,EGT</Name>
 <Val>0</Val>
 </U8>
 <DBL>
@@ -4681,7 +4681,7 @@
 </DBL>
 </Array>
 <Array>
-<Name>ArrayReserve1</Name>
+<Name>AFR</Name>
 <Dimsize>575</Dimsize>
 <DBL>
 <Name></Name>
@@ -6985,7 +6985,7 @@
 </DBL>
 </Array>
 <Array>
-<Name>ArrayReserve2</Name>
+<Name>EGT</Name>
 <Dimsize>575</Dimsize>
 <DBL>
 <Name></Name>
