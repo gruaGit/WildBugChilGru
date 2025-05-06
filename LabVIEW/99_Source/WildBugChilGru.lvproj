@@ -20,7 +20,7 @@
 		<Item Name="printgraph_V0.01.vi" Type="VI" URL="../printgraph_V0.01.vi"/>
 		<Item Name="ReCalc_V2.00.vi" Type="VI" URL="../ReCalc_V2.00.vi"/>
 		<Item Name="Rollendrehzahl (SubVI).vi" Type="VI" URL="../Rollendrehzahl (SubVI).vi"/>
-		<Item Name="savecluster_V0.01.vi" Type="VI" URL="../savecluster_V0.01.vi"/>
+		<Item Name="SaveCluster.vi" Type="VI" URL="../SaveCluster.vi"/>
 		<Item Name="Scale_Graph_X (SubVI).vi" Type="VI" URL="../Scale_Graph_X (SubVI).vi"/>
 		<Item Name="Scale_Graph_Y (SubVI).vi" Type="VI" URL="../Scale_Graph_Y (SubVI).vi"/>
 		<Item Name="Stringhandling(SubVI)0.0.2.vi" Type="VI" URL="../Stringhandling(SubVI)0.0.2.vi"/>
@@ -145,6 +145,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A8439469-0CB1-4769-A2D0-D2432BEE9614}</Property>
+				<Property Name="Bld_version.build" Type="Int">1</Property>
 				<Property Name="Bld_version.major" Type="Int">3</Property>
 				<Property Name="Bld_version.minor" Type="Int">2</Property>
 				<Property Name="Destination[0].destName" Type="Str">WildBugChilGru.exe</Property>
@@ -156,7 +157,7 @@
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/Mein Computer/WildBugChilGru.ico</Property>
 				<Property Name="Source[0].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[0].itemID" Type="Str">{4E7F70D3-C2E4-43BB-9AF2-495AF4957388}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{02EBDE5D-6909-4758-8D81-B27008C9C993}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/Mein Computer/printgraph_V0.01.vi</Property>
@@ -205,7 +206,7 @@
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[2].type" Type="Str">VI</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/Mein Computer/savecluster_V0.01.vi</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/Mein Computer/SaveCluster.vi</Property>
 				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[3].type" Type="Str">VI</Property>
 				<Property Name="Source[4].destinationIndex" Type="Int">1</Property>
